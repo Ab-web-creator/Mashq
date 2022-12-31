@@ -1,3 +1,8 @@
+:root {
+  --topBarColor: #892000;
+  --hoverColor: rgb(197, 197, 197);
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -54,7 +59,7 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #bb2f04;
+  background-color: var(--topBarColor);
 
   height: 40px;
   border-width: 0px;
@@ -71,10 +76,10 @@ button {
   }
 
 button:hover {
-  color: #5d1600;
-  background-color: rgb(212, 212, 8);
+  color: var(--topBarColor);
+  background-color: var(--hoverColor);
   border-radius: 15px;
-  border: 2px solid rgb(162, 162, 4);
+  /* border: 2px solid rgb(162, 162, 4); */
   }
 
   .px_container img {
@@ -92,7 +97,6 @@ button:hover {
   }
 
   .px_container div img {
-
     -webkit-transform: scale(1);
     transform: scale(1);
     -webkit-transition: .3s ease-in-out;
@@ -115,9 +119,9 @@ button:hover {
   left: 0;
   opacity: 1;
   transition: opacity .2s ease-in-out;
-  background-color: #bb2f04 ;
+  background-color: var(--topBarColor) ;
   transition: transform 0.4s ease-in-out;
-  z-index: 99;
+  z-index: 1199;
   display: flex;
   }
 
@@ -160,7 +164,7 @@ button:hover {
   font-size: 14px;
   margin: 0 2px;
   font-weight: bold;
-  cursor: pointer;
+  /* cursor: pointer; */
   }
  
 .hamburger_menu li i {
@@ -169,8 +173,9 @@ button:hover {
   }
 
 .hamburger_menu li i:hover  {
-  color: #302927;
-  background-color: rgb(212, 212, 8);
+  color: var(--topBarColor);
+
+  background-color: var(--hoverColor);
   border-radius: 12px;
   cursor: pointer;
   }
@@ -197,6 +202,21 @@ button:hover {
   .hamburger_menu i {
     /* padding-top: 3px; */
     color: white;
+  }
+
+  #responsiveMenuToggleButton #menuBtn {
+    display: block;
+  }
+
+  #responsiveMenuToggleButton #close_sidemenu {
+    display: none;
+  }
+
+  #responsiveMenuToggleButton.open #menuBtn {
+    display: none;
+  }
+  #responsiveMenuToggleButton.open #close_sidemenu {
+    display: block;
   }
 
   section {
@@ -366,7 +386,7 @@ button:hover {
 
 .footer {
   color: white;
-  background-color: #bb2f04 ;
+  background-color: var(--topBarColor) ;
   padding: 10px 20px;
 
   display: flex;
@@ -454,12 +474,13 @@ iframe {
   }
 
   .nav_container {
-    background-color: #bb2f04 ;
+    background-color: var(--topBarColor);
+    /* border-bottom: 3px double rgb(255, 136, 0); */
   }
 
   .nav li a:hover {
-    color: #282525;
-    background-color: yellow;
+    color: var(--topBarColor);
+    background-color: var(--hoverColor);
     border-radius: 15px;
   }
 
@@ -601,6 +622,23 @@ iframe {
 }
 
 @media only screen and (min-width: 800px) {
+
+  .menu_ism1.inactive {
+    color: transparent;
+    opacity: 0;
+    cursor: default;
+  }
+  .menu_ism2.inactive {
+    color: transparent;
+    opacity: 0;
+    cursor: default;
+  }
+  .menu_ism3.inactive {
+    color: transparent;
+    opacity: 0;
+    cursor: default;
+  }
+
   .sixth  {
     background-position: center right;
     background-size: 600px;
