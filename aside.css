@@ -1,0 +1,230 @@
+
+.hdn-cont {
+  margin-top: 10px;
+}
+
+aside {
+  position: fixed;
+  top: 0px;
+  right: -470px;
+  transition: right 0.4s ease;
+  width: 250px;
+  background-color: #333333;
+  padding-top: 0px;
+  padding-bottom: 20px;
+  z-index: 1000;
+  height: fit-content;
+  max-height: 100vh;
+  overflow-y: auto;
+  border-radius: 0 0 0 8px;
+}
+
+aside.active {
+  right: 0px;
+}
+
+aside.notactive {
+  right: -461px;
+}
+
+aside ul li.active {
+  color: #ffffff;
+}
+
+aside ul li:last-child {
+  margin-top: 20px;
+}
+
+.hdn-cont li {
+  line-height: 40px; 
+  border-bottom: 1px solid #fbfbfb1e;
+  display: flex;
+  flex-direction: row;
+  justify-content: left; 
+}
+
+.hdn-cont li ul {
+  color: #ffffff;
+  margin-top: auto;
+  /* margin-bottom: auto;  */
+  font-size: 15px;
+}
+
+.mark {
+  margin-bottom: 10px;
+  /* margin-top: 10px; */
+  position: relative;
+  width: 100%;
+  line-height: 20px; 
+
+  /* height: 40px; */
+  padding: 3px 0px;
+  font-size: 15px;
+  /* background-color: #111111; */
+  color: white;
+  
+  /* margin-bottom: 10px; */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; 
+}
+
+.men_flex {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; 
+}
+
+.home_sidemenu {
+  text-align: left;
+  line-height: 20px;
+}
+
+.first_qator {
+  margin-left: 15px;
+  width: 40%;
+}
+.second_qator {
+  color: #cccccc;
+  text-align: left;
+  width: 15%;
+}
+
+.third_qator {
+  margin-left: auto;
+  margin-right: 15px;
+  width: 20px;
+}
+
+#close_sidemenu {
+  /* background-color: #7f72f6; */
+  position: absolute;
+  width: 70px;
+  font-size: 15px;
+  text-align: right;
+  right: 0px;
+}
+
+#close_sidemenu a {
+  margin-right: 20px;
+}
+
+.menu_flag {
+  width: 35%;
+}
+.menu_flag img {
+  width: 10px;
+}
+
+aside ul li a {
+  display: block;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+aside ul .men_flex:hover,
+aside ul li:last-child:hover {
+  letter-spacing: 0.08rem;
+  transition:  letter-spacing 0.4s ease-in-out;
+  background: #454545 !important;
+}
+
+aside ul li.active:hover {
+  letter-spacing: 0.08rem;
+  transition:  letter-spacing 0.4s ease-in-out;
+  color: rgb(236, 236, 236) !important;
+  background: #7f72f6 !important;
+}
+
+aside ul li a.active {
+  /* color: cyan;
+  background: #b5c508; */
+}
+
+aside ul li.active ul li a {
+  color: #e6e6e6;
+  background: #eacd2b;
+}
+
+aside ul li:first-child {
+  border-bottom: none;
+}
+
+aside ul li:last-child {
+  border-bottom: none;
+}
+
+aside ul li ul {
+  cursor: pointer;
+}
+
+/* ochish-yopish expanding  */
+.show_submenus {
+  display: block;
+  transition: all ease-in-out 4s;
+}
+
+
+ 
+
+@media only screen and (min-width: 600px) {
+  .hdn-cont {
+    margin-top: 0px;
+  }
+  aside {
+    width: 450px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .hdn-cont ul li, .mark ul  {
+    padding-right: 15px;
+  }
+
+  .hdn-cont ul li ul,  .mark ul a,
+  .hdn-cont ul li:last-child a,
+  aside ul li a  {
+    font-size: 18px;
+    line-height: 46px;
+  }
+
+  .first_qator {
+    margin-left: 25px;
+    width: 30%;
+  }
+  .second_qator {
+    color: #cccccc;
+    text-align: left;
+    width: 15%;
+  }
+   
+  .mark {
+    margin-bottom: 20px;
+    background-color: #222222;
+  }
+
+  .mark   .first_qator {
+    /* background-color: #3c3b3b; */
+  }
+
+}
+
+
+
+
+
+/* 
+
+git pull
+
+git add .
+
+git commit -m "lyuboe sobwenie"
+
+git push
+
+*/
