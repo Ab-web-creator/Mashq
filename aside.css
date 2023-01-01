@@ -1,8 +1,3 @@
-
-.side_nav {
-  margin-top: 20px;
-}
-
 aside {
   position: fixed;
   top: 61px;
@@ -29,6 +24,9 @@ aside.notactive {
   right: -461px;
 }
 
+.side_nav {
+  padding: 20px 30px;
+}
 
 aside ul {
   display: flex;
@@ -36,14 +34,10 @@ aside ul {
   justify-content: center; 
 }
 
-aside ul li.active {
-  color: #ffffff;
-}
-
 aside ul li {
   padding: 4px 0px;
-  text-align: center;
-  line-height: 40px; 
+  text-align: left;
+  line-height: 30px; 
   /* border-bottom: 1px solid #fbfbfb1e; */
 }
 
@@ -52,7 +46,7 @@ aside ul li a {
   text-transform: uppercase;
   padding: 2px 0px;
   display: block;
-  text-decoration: none;
+  /* text-decoration: none; */
   font-size: 16px;
   font-weight: 500;
   color: #ffffff;
@@ -65,38 +59,30 @@ aside ul li a:hover {
   color: rgb(234, 134, 3);
   /* color: var(--topBarColor); */
 }
-aside ul li:last-child a:hover {
-  letter-spacing: 0rem;
-  background-color: transparent;
-  color: #ffffff;
-}
-
-
-
-aside ul li a.active {
-  /* color: cyan;
-  background: #b5c508; */
-}
-
 
 aside .tillar {
-  border-bottom: none;
-  margin-top: 20px;
+  text-align: center;
+}
+aside .tillar a:hover {
+  color: #ffffff;
+  letter-spacing: 0rem;
 }
 
 aside .tillar ul {
-  border-width: 0px;
-
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly; 
+  justify-content: space-between; 
+}
+
+aside .tillar .birinchi_qator_ul {
+  margin-top: 10px;
 }
 
 aside .tillar ul li {
   border-width: 0px;
 }
 aside .tillar ul li a {
-  padding: 1px 20px;
+  padding: 1px 10px;
   font-size: 12px;
   border-radius: 5px;
   color: #ffffff;
@@ -107,68 +93,45 @@ aside .tillar ul li a:hover {
   background-color: rgb(197, 197, 197);
   color: var(--topBarColor);
 }
- 
+
+aside .tillar ul li:first-child {
+  margin-left: -10px;
+}
+aside .tillar ul li:last-child {
+  margin-right: -10px;
+}
 
 @media only screen and (min-width: 600px) {
 
   .side_nav {
+    position: relative;
     margin-top: 0px;
   }
 
   aside {    
     padding-top: 10px;
     padding-bottom: 10px;
-    border-radius: 10px;
     background-color: var(--topBarColor);
     width: 400px;
-    height: 600px;
-
-    margin-top: -300px;  /* Negative half of height. */
-    margin-left: -200px;  /* Negative half of width. */
-    /* border: 3px double rgb(255, 136, 0); */
     top: -600px;
     transition: top 0.4s ease-in-out;
     display: flex;
   }
-  /* aside {    
-    padding-top: 40px;
-    padding-bottom: 40px;
-    background-color: rgba(0, 0, 0, 0);
-    width: 100%;
-    right: 0%;
-    top: -600px;
-    transition: top 0.4s ease;
-    display: flex;
-  } */
 
   aside.active {
-    top: 50%;
-    left: 50%;
+    top: 61px;
   }
-  /* aside.active {
-   top: 100px;
-  } */
 
   .side_nav {
-    /* padding-top: 20px;
-    border-radius: 10px; */
     background-image: url(./images/);
     background-size: contain;
     background-position: top;
     background-repeat: no-repeat;
+
     width: 100%;
     margin: auto;
- 
+    padding: 20px 50px;
   }
-
-/* 
-  .side_nav {
-    padding-top: 20px;
-    border-radius: 10px;
-    margin: auto;
-    width: 400px;
-    background-color: var(--topBarColor);
-  } */
 
   aside ul li {
     padding: 8px 0px;
@@ -179,6 +142,35 @@ aside .tillar ul li a:hover {
     font-size: 20px;
   }
 
+  aside #tillar_a {
+    margin: auto;
+    width: fit-content;
+    padding: 2px 20px;
+    background-color: var(--topBarColor);
+  }
+
+  aside .tillar:before {
+    content: "";
+    position: absolute;
+    top: 382px;
+    left: 0px;
+    width: 100%;
+    border: 0.5px solid rgba(255, 255, 255, 0.204); 
+    z-index: -1;
+  }
+  aside .tillar::after {
+    content: "";
+    position: absolute;
+    top: 378px;
+    left: 0px;
+    width: 100%;
+    border: 0.5px solid rgba(255, 255, 255, 0.204); 
+    z-index: -1;
+  }
+
+  aside .tillar ul li {
+    line-height: 30px;
+  }
   aside .tillar ul li a {
     font-size: 16px;
   }

@@ -166,23 +166,7 @@ button:hover {
   font-weight: bold;
   /* cursor: pointer; */
   }
- 
-.hamburger_menu li i {
-  padding: 5px 15px;
-  transition: all ease-in-out 0.4s;
-  }
 
-.hamburger_menu li i:hover  {
-  color: var(--topBarColor);
-
-  background-color: var(--hoverColor);
-  border-radius: 12px;
-  cursor: pointer;
-  }
-
-.nav .navLink_container li {
-  padding: 5px 8px;
-  }
 
   .hamburger_menu {
     position: relative;
@@ -198,11 +182,26 @@ button:hover {
   .hamburger_menu li {
     margin: auto;
   }
-
-  .hamburger_menu i {
-    /* padding-top: 3px; */
+ 
+  .hamburger_menu li i {
     color: white;
+    padding: 5px 15px;
+    transition: all ease-in-out 0.4s;
   }
+
+.hamburger_menu li i:hover  {
+  color: var(--topBarColor);
+
+  background-color: var(--hoverColor);
+  border-radius: 12px;
+  cursor: pointer;
+  }
+
+.nav .navLink_container li {
+  padding: 5px 8px;
+  }
+
+
 
   #responsiveMenuToggleButton #menuBtn {
     display: block;
@@ -515,6 +514,8 @@ iframe {
   }
 
   .nav {
+    width: 100%; 
+    /* padding: 0px 20px; */
     width: 540px; 
   }
   main {
@@ -524,7 +525,7 @@ iframe {
   }
   .logo_top_left_cont {
     position: fixed;
-    left: -200px
+    left: -200px;
   }
   .hamburger_menu {
     margin-right: -5px;
@@ -617,27 +618,21 @@ iframe {
 }
 
 
-@media only screen and (min-width: 740px) {
+@media only screen and (min-width: 700px) {
+  .nav {
+    width: 100%; 
+    padding: 0px 30px;
+    /* width: 540px;  */
+  }
 
+  .logo_top_left_cont {
+    position: relative;
+    left: 15px;
+  }
 }
 
 @media only screen and (min-width: 800px) {
 
-  .menu_ism1.inactive {
-    color: transparent;
-    opacity: 0;
-    cursor: default;
-  }
-  .menu_ism2.inactive {
-    color: transparent;
-    opacity: 0;
-    cursor: default;
-  }
-  .menu_ism3.inactive {
-    color: transparent;
-    opacity: 0;
-    cursor: default;
-  }
 
   .sixth  {
     background-position: center right;
@@ -650,17 +645,12 @@ iframe {
   }
 
 
-  .nav, main {
+  main {
     width: 700px; 
   }
 
   .logo_top_left_cont {
-    position: relative;
-    left: 0px;
-  }
-  
-  .hamburger_menu {
-    margin-right: -25px;
+    left: 20px;
   }
 
   .display_not {
@@ -712,7 +702,7 @@ iframe {
 
 
 @media only screen and (min-width: 992px) {
-  .nav, main {
+  main {
     width: 850px; 
   }
 
@@ -732,7 +722,7 @@ iframe {
     background-size: 600px;
   }
 
-  .nav, main {
+  main {
     width: 1050px; 
   }
   
