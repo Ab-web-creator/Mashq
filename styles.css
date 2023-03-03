@@ -15,12 +15,25 @@ body {
   padding-top: var(--nav-height);
   }
 
+  html, body {
+    height: 100%;
+  }  
+  .wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .big_main {
+    background-color: beige;
+    flex-grow: 1;
+  }
+
   .black_oon_top {
     position: absolute;
     top: 0px;
     left: 0px;
     width: 100%;
-    height: 73px;
+    height: 53px;
     background-color: #020201;
     z-index: 2;
   }
@@ -43,6 +56,12 @@ body {
   display: block;
 }
 
+.obshiy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 main {
   font-size: 14px;
   font-weight: 500;
@@ -53,64 +72,7 @@ main {
   justify-content: center;
   gap: 40px;
   }
-
-button {
-  width: 130px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: var(--topBarColor);
-
-  height: 40px;
-  border-width: 0px;
-  border-radius: 5px;
-  margin: auto;
-  color: white;
-  transition: all ease-in-out 0.4s;
-  }
-
-  button p {
-    margin: auto;
-    padding: 5px 10px;
-    text-transform: uppercase;
-  }
-
-button:hover {
-  color: var(--topBarColor);
-  background-color: var(--hoverColor);
-  border-radius: 15px;
-  /* border: 2px solid rgb(162, 162, 4); */
-  }
-
-  .px_container img {
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.3);
-  }
-
-  .px_container div {
-    border-radius: 10px;
-    overflow: hidden;
-  }
-
-  .px_container div:hover {
-    border-radius: 10px;
-  }
-
-  .px_container div img {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-transition: .3s ease-in-out;
-    transition: .3s ease-in-out;
-  }
-
-  .px_container div:hover img {
-    -webkit-transform: scale(1.3);
-    transform: scale(1.3);
-  }
-  .px_container div:hover img {
-    opacity: 1;
-  }
-
+ 
 .nav_container {
   width: 100%;
   height: var(--nav-height);
